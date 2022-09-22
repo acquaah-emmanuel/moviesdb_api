@@ -1,0 +1,140 @@
+.mediaCard{
+    position: relative;
+    width: 270px;
+    padding: .5rem;
+    border-radius: 1rem;
+    /* background: linear-gradient(rgb(30, 144, 255, 0.5), rgb(0, 0, 0, 0.5)); */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.9);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+/* .mediaCard:hover{
+    transform: scale(1.1);
+    transition: all .75s ease;
+} */
+@media screen and (max-width: 768px){
+    .mediaContainer{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 180px;
+    }
+    .mediaCard{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .poster{
+        width: 180px;
+    }
+}
+@media screen and (max-width: 968px){
+    .mediaContainer{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 170px;
+    }
+    .mediaCard{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .poster{
+        width: 170px;
+    }
+}
+.poster{
+    max-width: 100%;
+    border-radius: 1rem;
+}
+.movieDetails{
+    max-width: 100%;
+    padding: 1rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-radius: 0 0 1rem 1rem;
+    color: #fff;
+}
+.title{
+    font-size: 1rem;
+    margin-bottom: .1rem;
+}
+.date{
+    font-size: .8rem;
+    display: flex;
+    justify-content: space-between;
+}
+.rate{
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    background: dodgerblue;
+    color: #fff;
+    border: 3px solid #fff;
+    outline: 2px solid dodgerblue;
+    padding: .4rem;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+.overview{
+    position: absolute;
+    top: .5rem;
+    bottom: 0;
+    max-height: 100%;
+    border-radius: 1rem;
+    width: 94%;
+    color: #000;
+    box-sizing: border-box;
+    padding: 1rem;
+    transition: all .3s ease-in-out;
+    overflow-y: auto;
+    transform: translateY(101%);
+}
+.overview h1{
+    font-size: 1rem;
+    color: #000;
+}
+.overview p{
+    color: #fff;
+}
+.overview .btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 15px;
+    margin-top: 2rem;
+}
+.overview .btns a{
+    color: #fff;
+    background: dodgerblue;
+    border: 1px solid dodgerblue;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    transition: all .3s ease;
+}
+.overview .btns a:last-child{
+    background: none;
+    color: dodgerblue;
+}
+.overview .btns a:last-child:hover{
+    background: dodgerblue;
+    color: #fff;
+}
+.mediaCard:hover .overview{
+    transform: translateY(0%);
+}

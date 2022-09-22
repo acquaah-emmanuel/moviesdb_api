@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+  }
+  .trending{
+     display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    padding: 2rem 0;
+}
+.movieContentContainer{
+  display: flex;
+  justify-content: center;
+  background: #222;
+}
+@media only screen and (max-width: 1024px){
+  .trending{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media only screen and (max-width: 900px){
+  .trending{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 621px){
+  .trending{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem .2rem;
+  }
+}
+
+.notFound{
+  font-size: 1rem;
+  color: #ccc;
+  padding: 100% 0;
+  display: inline-flex;
+  text-align: center;
+}
+.paginationControl{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  padding-bottom: 3rem;
+}
+.CurrentPageNumber{
+  padding: 0 2rem;
+  color: #ccc;
+}
+
+.downButton{
+  padding: .5rem;
+  background: dodgerblue;
+  border: none;
+  outline: none;
+  border-radius: .3rem;
+  width: 5rem;
+  cursor: pointer;
+}
+
+.HomeMoviesContentContainerBG{
+  background: #222;
+}
+.HomeMoviesContent{
+  display: flex;
+  overflow-x: scroll;
+  padding: 24px;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 24px;
+  gap: 12px;
+}
+
+.topDiv{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+.topDiv .contentTitle{
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 500;
+}
+.viewMore{
+  border: 1px solid #fff;
+  padding: .5rem;
+  color: #fff;
+}
+
+.ControlsTopDiv{
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 4rem 0;
+}
+.topButton{
+  border: 1px solid #fff;
+  padding: .5rem;
+  color: #fff;
+  width: 5rem;
+  background: transparent;
+  transition: all .5s ease;
+  cursor: pointer;
+}
+.topButton:hover{
+  background-color: #fff;
+  color: #222;
+}
