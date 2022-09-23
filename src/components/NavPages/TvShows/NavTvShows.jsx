@@ -5,6 +5,7 @@ import { Outlet, Link } from "react-router-dom";
 import axios from 'axios';
 import MovieContent from '../../MovieContent/MovieContent'
 import Footer from '../../Footer/Footer'
+import { API_KEY } from '../../Api/apiConfig';
 
 let arr = ["Popular", "Airing Today", "On Tv", "Top Rated"]
 
@@ -33,7 +34,7 @@ const NavTvShows = () => {
         getMoviesData();
     }, [movieFilter, currentPageNumber] )
 
-    let base_url = `https://api.themoviedb.org/3/tv/${movieFilter}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${currentPageNumber}`
+    let base_url = `https://api.themoviedb.org/3/tv/${movieFilter}?api_key=${API_KEY}&language=en-US&page=${currentPageNumber}`
 
     const setMovieType = (movieType) => {
         if(movieType === 'Top Rated'){

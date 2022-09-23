@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { API_KEY } from '../components/Api/apiConfig';
 
 const Background = () => { 
 
@@ -10,7 +11,7 @@ const Background = () => {
     }, [] )
 
     let base_url = `
-    https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`
+    https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`
 
     const getMoviesData = async  () =>  {
         let {data} = await axios.get(base_url)

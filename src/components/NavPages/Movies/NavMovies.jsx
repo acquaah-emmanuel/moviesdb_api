@@ -5,6 +5,7 @@ import { Outlet, Link } from "react-router-dom";
 import axios from 'axios';
 import MovieContent from '../../MovieContent/MovieContent'
 import Footer from '../../Footer/Footer'
+import { API_KEY } from '../../Api/apiConfig';
 
 let arr = ["Popular", "Now Playing", "Upcoming", "Top Rated"]
 
@@ -32,7 +33,7 @@ const navMovies = () => {
         getMoviesData();
     }, [movieFilter, currentPageNumber] )
 
-    let base_url = `https://api.themoviedb.org/3/movie/${movieFilter}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${currentPageNumber}`
+    let base_url = `https://api.themoviedb.org/3/movie/${movieFilter}?api_key=${API_KEY}&language=en-US&page=${currentPageNumber}`
 
     const setMovieType = (movieType) => {
         if(movieType === 'Top Rated'){
@@ -57,7 +58,7 @@ const navMovies = () => {
     const searchMovie = async (event) => {
         if(event.key==="Enter"){
             setSearchKeyword("");
-           base_url = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&query=${searchKeyword}`
+           base_url = `https://api.themoviedb.org/3/search/movie?api_key=${ API_KEY}&query=${searchKeyword}`
             let {data} = await axios.get(base_url)
             return setMovies(data.results); 
         }

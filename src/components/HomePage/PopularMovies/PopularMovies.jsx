@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import MovieContent from '../../MovieContent/MovieContent'
 import './PopularMovies.css'
+import { API_KEY } from '../../Api/apiConfig'
 
 const PopularMovies = () => {
     const [ page, setPage] = useState(1)
     const [ content, setContent] = useState([])
 
     const fetchPopular = async () =>{
-        const { data }  = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`)
+        const { data }  = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`)
         setContent(data.results)
         setPage(data.total_results)
     }

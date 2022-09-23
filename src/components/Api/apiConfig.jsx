@@ -15,8 +15,8 @@ export const noPicture =
   "https://upload.wikimedia.org/wikipedia/en/6/60/No_Picture.jpg";
 
 
-  // export let base_url ="https://api.themoviedb.org/3"
+  export let base_url ="https://api.themoviedb.org/3"
 
-  // export let API_KEY = `&api_key=${process.env.REACT_APP_API_KEY}`
+  export const API_KEY = `3b92f42dd5e2d7a9ab0a778973611246`
 
-  // export let url = base_url+"/discover/movie?sort_by=popularity.desc"+API_KEY;
+  export let url = base_url+"/discover/movie?sort_by=popularity.desc"+API_KEY;

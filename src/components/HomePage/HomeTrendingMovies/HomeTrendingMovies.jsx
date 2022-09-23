@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import MovieContent from '../../MovieContent/MovieContent'
 import './HomeTrendingMovies.css'
+import { API_KEY } from '../../Api/apiConfig'
 
 const HomeTrendingMovies = () => {
 
@@ -11,7 +12,7 @@ const HomeTrendingMovies = () => {
 
     const fetchTrending = async () =>{
         const { data }  = await axios.get(`
-        https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_KEY}&page=${page}`)
+        https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}&page=${page}`)
         setContent(data.results)
         setPage(data.total_results)
     }

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import PeopleContent from '../../PeopleContent/PeopleContent';
 import Footer from '../../Footer/Footer'
+import { API_KEY } from '../../Api/apiConfig';
 
 let arr = ["Popular", "Latest"]
 
@@ -30,7 +31,7 @@ const NavPeople = () => {
         getPersonData();
     }, [peopleFilter, currentPageNumber] )
 
-    let base_url = `https://api.themoviedb.org/3/person/${peopleFilter}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${currentPageNumber}`
+    let base_url = `https://api.themoviedb.org/3/person/${peopleFilter}?api_key=${API_KEY}&language=en-US&page=${currentPageNumber}`
 
     const setPeopleContent= (personContent) => {
        return setPeopleFilter(personContent.toLowerCase())
@@ -45,7 +46,7 @@ const NavPeople = () => {
     const searchPerson = async (event) => {
         if(event.key==="Enter"){
             setSearchKeyword("");
-            base_url = `https://api.themoviedb.org/3/search/person?api_key=${process.env.REACT_APP_API_KEY}&query=${searchKeyword}`
+            base_url = `https://api.themoviedb.org/3/search/person?api_key=${API_KEY}&query=${searchKeyword}`
             let {data} = await axios.get(base_url)
             setPeople(data.results); 
         }
