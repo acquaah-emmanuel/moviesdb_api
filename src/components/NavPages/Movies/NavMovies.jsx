@@ -35,11 +35,11 @@ const navMovies = () => {
     let base_url = `https://api.themoviedb.org/3/movie/${movieFilter}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${currentPageNumber}`
 
     const setMovieType = (movieType) => {
-        if(movieType == 'Top Rated'){
+        if(movieType === 'Top Rated'){
             setMovieFilter('top_rated');
-        } else if (movieType == 'Now Playing'){
+        } else if (movieType === 'Now Playing'){
             setMovieFilter('now_playing');
-        } else if (movieType == 'Upcoming'){
+        } else if (movieType === 'Upcoming'){
             setMovieFilter('upcoming');
         }
          else {
