@@ -1,6 +1,5 @@
 import React from 'react'
 import HomePage from '../../HomePage/HomePage'
-import './home.css'
 import Footer from '../../Footer/Footer'
 import HomeTrendingMovies from '../../HomePage/HomeTrendingMovies/HomeTrendingMovies'
 import MoviesDiscovered from '../../HomePage/UpcomingMovies/UpcomingMovies'

@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import PeopleContent from '../../PeopleContent/PeopleContent';
 import Footer from '../../Footer/Footer'
-import CustomPagination from '../../Pagination/CustomPagination'
 
 let arr = ["Popular", "Latest"]
 

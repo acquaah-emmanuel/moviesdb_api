@@ -5,7 +5,6 @@ import { Outlet, Link } from "react-router-dom";
 import axios from 'axios';
 import MovieContent from '../../MovieContent/MovieContent'
 import Footer from '../../Footer/Footer'
-import CustomPagination from '../../Pagination/CustomPagination'
 
 let arr = ["Popular", "Airing Today", "On Tv", "Top Rated"]
 
