@@ -1,9 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { img_300, unavailable } from '../Api/apiConfig'
 import './MovieContent.css'
 
 const MovieContent = ({
-    id,
     poster,
     title,
     date,
@@ -25,8 +25,8 @@ const MovieContent = ({
           <h1>overview</h1>
           <p>{overview}</p>
           <div className="btns">
-            <a href="#">Play</a>
-            <a href="#">Watch Later</a>
+            <Link to='/'>Play</Link>
+            <Link to='/'>Watch Later</Link>
           </div>
         </div>
     </div>
